@@ -32,4 +32,9 @@ export class PlayerService {
     return new Player();
   }
 
+  async getImpostors(): Promise<string[]> {
+    const players = await this.getAllPlayers();
+    return players.filter(player => player.role).map(player => player.name);
+  }
+
 }

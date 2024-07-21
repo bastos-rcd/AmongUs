@@ -12,13 +12,15 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { PlayerComponent } from './player/player.component';
 import { CrewmateComponent } from './crewmate/crewmate.component';
+import { ImpostorComponent } from './impostor/impostor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PlayerComponent,
-    CrewmateComponent
+    CrewmateComponent,
+    ImpostorComponent
   ],
   imports: [
     BrowserModule,
