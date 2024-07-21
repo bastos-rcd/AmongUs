@@ -21,4 +21,15 @@ export class PlayerService {
     const players = playerSnapshot.docs.map(doc => doc.data());
     return players as Player[];
   }
+
+  async getPlayer(name: string): Promise<Player> {
+    const players = await this.getAllPlayers();
+    for (let player of players) {
+      if (player.name === name) {
+        return player;
+      }
+    }
+    return new Player();
+  }
+
 }

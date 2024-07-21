@@ -1,0 +1,13 @@
+<div class="card border-light position-absolute top-50 start-50 translate-middle" style="width: 80%;">
+    <div class="card-header d-flex justify-content-between">
+        <h1 [ngClass]="{
+            'text-info': showRole && !player.role,
+            'text-danger': showRole && player.role,
+            'text-body': !showRole
+        }">{{ player.name }}</h1>
+        <button (click)="onShowRole()" type="button" class="btn btn-light"><i class="fa-solid fa-eye"></i></button>
+    </div>
+    <div class="card-body">
+        <div *ngIf="!showRole" class="text-body d-flex justify-content-center">masqué</div>
+    </div>
+</div>

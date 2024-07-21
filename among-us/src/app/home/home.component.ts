@@ -33,6 +33,7 @@ export class HomeComponent {
   public onPlay(): void {
     if (this.allPlayers.find(player => player.name === this.playerName)) {
       this.isNotValid = false;
+      this.router.navigateByUrl('/player/' + this.playerName);
     }
     else {
       this.isNotValid = true;
