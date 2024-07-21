@@ -7,7 +7,7 @@ import { TaskControlComponent } from './task/task-control/task-control.component
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'player/:name', component: PlayerComponent },
-  { path: 'task/:num', component: TaskControlComponent }
+  { path: 'task/:num/:player', component: TaskControlComponent }
 ];
 
 @NgModule({

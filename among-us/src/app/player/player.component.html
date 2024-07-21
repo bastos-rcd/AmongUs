@@ -9,7 +9,7 @@
     </div>
     <div class="card-body d-flex align-items-center justify-content-center" style="min-height: 10rem;">
         <div *ngIf="!showRole" class="">masqué</div>
-        <app-crewmate *ngIf="showRole && !player.role" [tasks]="player.tasks"></app-crewmate>
+        <app-crewmate *ngIf="showRole && !player.role" [tasks]="player.tasks" [playerName]="player.name"></app-crewmate>
         <app-impostor *ngIf="showRole && player.role"></app-impostor>
     </div>
 </div>

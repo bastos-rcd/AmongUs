@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 export class CrewmateComponent {
 
   @Input() public tasks: number[] = [];
+  @Input() public playerName: string = '';
 
   constructor() { }
 
