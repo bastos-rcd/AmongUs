@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { PlayerComponent } from './player/player.component';
 import { CrewmateComponent } from './crewmate/crewmate.component';
 import { ImpostorComponent } from './impostor/impostor.component';
+import { TaskControlComponent } from './task/task-control/task-control.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImpostorComponent } from './impostor/impostor.component';
     HomeComponent,
     PlayerComponent,
     CrewmateComponent,
-    ImpostorComponent
+    ImpostorComponent,
+    TaskControlComponent
   ],
   imports: [
     BrowserModule,
