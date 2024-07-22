@@ -4,6 +4,6 @@
     </div>
 </nav>
 
-<div *ngIf="numTask">
-
+<div *ngIf="numTask != null">
+    <app-task-1 *ngIf="numTask == 1"></app-task-1>
 </div>

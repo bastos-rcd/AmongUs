@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Player } from '../model/player';
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, doc, updateDoc } from 'firebase/firestore/lite';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +35,14 @@ export class PlayerService {
   async getImpostors(): Promise<string[]> {
     const players = await this.getAllPlayers();
     return players.filter(player => player.role).map(player => player.name);
+  }
+
+  async removeTask(playerName: string, taskNum: number): Promise<void> {
+    const player = await this.getPlayer(playerName);
+    player.tasks = player.tasks.filter(task => task != taskNum);
+    const playerRef = doc(this.db, 'players', player.name);
+    console.log(player.tasks);
+    await updateDoc(playerRef, { tasks: player.tasks });
   }
 
 }

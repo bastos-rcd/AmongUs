@@ -1,0 +1,18 @@
+<div class="card bg-secondary position-absolute top-50 start-50 translate-middle" style="width: 80%;">
+    <div class="card-header d-flex justify-content-center">
+        <span class="badge bg-primary">{{ codeToFind }}</span>
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-center">
+            <img src="assets/safe-deposit.png" class="img-thumbnail" style="max-width: 200px;">
+        </div>
+        <div *ngIf="!isValidate" class="d-flex justify-content-evenly mt-3">
+            <input ngModel [(ngModel)]="code" class="form-control" type="number" placeholder="CODE" style="width: 40%;">
+            <button (click)="onValidate()" class="btn btn-success" type="submit" style="width: 50px; height: 50px;"><i
+                    class="fa-solid fa-key"></i></button>
+        </div>
+        <div *ngIf="isValidate" class="d-flex justify-content-center mt-3">
+            <a routerLink="/player/{{ playerName }}" class="btn btn-success">RETOUR</a>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,7 @@ import { PlayerComponent } from './player/player.component';
 import { CrewmateComponent } from './crewmate/crewmate.component';
 import { ImpostorComponent } from './impostor/impostor.component';
 import { TaskControlComponent } from './task/task-control/task-control.component';
+import { Task1Component } from './task/task-1/task-1.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TaskControlComponent } from './task/task-control/task-control.component
     PlayerComponent,
     CrewmateComponent,
     ImpostorComponent,
-    TaskControlComponent
+    TaskControlComponent,
+    Task1Component
   ],
   imports: [
     BrowserModule,

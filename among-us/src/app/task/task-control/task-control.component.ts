@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TaskControlComponent {
 
   public readonly tasksName: string[] = [
-    'Électricité',
+    'Coffre fort',
   ];
   public numTask: number = 0;
   public playerName: string = '';
