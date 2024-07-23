@@ -11,6 +11,7 @@ export class TaskControlComponent {
 
   public readonly tasksName: string[] = [
     'Coffre fort',
+    'Électricité'
   ];
   public numTask: number = 0;
   public playerName: string = '';
