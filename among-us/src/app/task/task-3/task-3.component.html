@@ -1,0 +1,18 @@
+<div class="card bg-secondary position-absolute top-50 start-50 translate-middle" style="width: 80%;">
+    <div class="card-header d-flex justify-content-between p-3">
+        <span class="badge bg-warning">{{ result1 }}%</span>
+        <span class="badge bg-success">{{ result2 }}%</span>
+        <span class="badge bg-danger">{{ result3 }}%</span>
+    </div>
+    <div class="card-body">
+        <input type="range" class="form-range bg-warning" [value]="value1" [disabled]="value1 == result1"
+            (input)="onChangeValue1($event)">
+        <input type="range" class="form-range bg-success my-3" [value]="value2" [disabled]="value2 == result2"
+            (input)="onChangeValue2($event)">
+        <input type="range" class="form-range bg-danger" [value]="value3" [disabled]="value3 == result3"
+            (input)="onChangeValue3($event)">
+        <div *ngIf="value1==result1 && value2==result2 && value3==result3" class="d-flex justify-content-center mt-3">
+            <button class="btn btn-success" (click)="onValidate()">RETOUR</button>
+        </div>
+    </div>
+</div>
